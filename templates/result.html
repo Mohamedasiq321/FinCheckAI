@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Prediction Result</h1>
+
+        <h2>Status: <span style="color: {{ 'green' if status == 'Approved' else 'red' }}">{{ status }}</span></h2>
+
+        {% if sanity_flag %}
+            <p style="color: orange;">⚠ Warning: Sanity threshold exceeded! Ratio: {{ ratio | round(3) }}</p>
+        {% endif %}
+
+        {% if warnings %}
+            <h3>Warnings:</h3>
+            <ul>
+                {% for w in warnings %}
+                    <li style="color: darkorange;">{{ w }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if suggestions %}
+            <h3>Suggestions to Improve Approval Chances:</h3>
+            <ul>
+                {% for s in suggestions %}
+                    <li>{{ s }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <br><a href="/">🔁 Check Another Application</a>
+    </div>
+</body>
+</html>
