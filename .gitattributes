@@ -1,3 +1,7 @@
-templates/*.html linguist-generated=true
-static/*.css linguist-generated=true
-static/*.js linguist-generated=true
+
+static/* linguist-detectable=true linguist-language=HTML
+templates/* linguist-detectable=true linguist-language=HTML
+*.css linguist-detectable=true linguist-language=CSS
+*.js linguist-detectable=true linguist-language=JavaScript
+
+
