@@ -7,11 +7,10 @@
 *.csv linguist-detectable=true linguist-language=Python
 
 
-templates/* linguist-vendored
-static/* linguist-vendored
-*.html linguist-vendored
-*.css linguist-vendored
-*.js linguist-vendored
+*.py linguist-language=Python
+*.ipynb linguist-language=Python
+*.pkl linguist-language=Python
+*.csv linguist-language=Python
 
 
 *.log linguist-generated
