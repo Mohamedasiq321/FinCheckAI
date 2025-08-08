@@ -74,10 +74,10 @@
         <option value="Rural">Rural</option>
       </select>
 
-      <label for="sanity_threshold">Sanity Threshold (Optional)(0.0 - 1.0):
+      <label for="sanity_threshold">Sanity Threshold (0.0 - 1.0):
         <span class="tooltip" title="This defines how certain the prediction should be. 0.7 = 70% confidence.">🛈</span>
       </label>
-      <input type="number" step="0.01" id="sanity_threshold" name="sanity_threshold" placeholder="e.g., 0.7" >
+      <input type="number" step="0.01" id="sanity_threshold" name="sanity_threshold" placeholder="e.g., 0.7" requiredSS>
 
       <input type="submit" value="Check Eligibility">
     </form>
